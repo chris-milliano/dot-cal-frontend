@@ -1,4 +1,9 @@
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs/Observable";
+
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/catch";
+import "rxjs/add/opperator/of";
 
 import { Event } from "../../models/event.model";
 
@@ -7,7 +12,7 @@ export class EventsService {
 
     // TODO: This needs to come from a DB
     // Create a fake static JSON object return
-    private static events: Event[] = [
+    events: Event[] = [
 
         {
             title: "Angie\'s birthday 1",
@@ -42,7 +47,7 @@ export class EventsService {
     ]
 
     //
-    public static getEvents() {
-        return this.events;
+    getEvents(): Observable <Event[]> {
+        return null
     }
 }

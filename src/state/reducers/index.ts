@@ -2,12 +2,14 @@ import { Action, combineReducers } from "@ngrx/store";
 import { RouterState, routerReducer as router } from "@ngrx/router-store";
 
 import { GreetingState, reducer as greeting } from "./greeting.reducer";
+import { EventsState, reducer as calendarEvents } from "./calendar/events.reducer";
 // Overall AppState interface.
 // Basically functions as a TypeScript type
 // Representing the structure of the State Object
 export interface AppState {
-    greeting: GreetingState;
     router: RouterState;
+    greeting: GreetingState;
+    calendarEvents: EventsState;
 };
 
 // Combine reducers takes an object of AppState key -> reducer
@@ -16,8 +18,9 @@ export interface AppState {
 // the greeting piece of the app state will passed to the
 // greeting reducer as its state, along with the current action
 export const reducer = combineReducers({
+    router,
     greeting,
-    router
+    calendarEvents
 });
 
 // Use this in AppModule to be compatible with AOT Compilation.
