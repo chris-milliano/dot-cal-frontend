@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Effect, Actions } from "@ngrx/effects";
 import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/Observable/of';
 
 import { CalendarActions } from "../../../pages/calendar/calendar.actions";
 import { EventsService } from "../../../services/calendar/events.service";
