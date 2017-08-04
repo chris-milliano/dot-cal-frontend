@@ -1,4 +1,39 @@
-#calendar-container {
-    background-color: #00f;
-    color: #0f0;
+#calendar-container {}
+
+#events {
+    background-color: #f00;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+
+    .event {
+        background-color: #0f0;
+        width: 90%;
+        margin: 10px 5%;
+        transition: all 1s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .event__section {
+            float: left;
+        }
+
+        .event__time {
+            background-color: teal;
+            width: 20%;
+        }
+
+        .event__date {
+            background-color: pink;
+            width: 20%;
+        }
+
+        .event__title-and-location {
+            background-color: purple;
+            width: 60%;
+        }
+    }
 }
